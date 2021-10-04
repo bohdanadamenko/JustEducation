@@ -21,5 +21,3 @@ def currency_rates(name):
     d, m, y = map(int, date_list)
 
     return f'{datetime(day=d, month=m, year=y)} {name}/RUB: {rate}'
-
-
