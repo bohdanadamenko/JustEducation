@@ -12,4 +12,5 @@ def thesaurus_adv(*name_lastnames):
 
 thesaurus_adv("Иван Сергеев", "Инна Серова", "Петр Алексеев", "Илья Иванов", "Анна Савельева")
 
+
 print(sorted(names_dict.items()))
