@@ -5,7 +5,8 @@ def thesaurus_adv(*name_lastnames):
     for name_lastname in name_lastnames:
         name, lastname = name_lastname.split()
         names_dict.setdefault(lastname[0], {})
-        names_dict[lastname[0]].setdefault(name[0], name_lastname)
+        names_dict[lastname[0]].setdefault(name[0], [])
+        names_dict[lastname[0]][name[0]].append(name_lastname)
     return names_dict
 
 
