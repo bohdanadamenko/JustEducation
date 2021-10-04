@@ -20,4 +20,4 @@ def currency_rates(name):
     date_list = response[date_start:date_end].split(".")
     d, m, y = map(int, date_list)
 
-    return f'{datetime(day=d, month=m, year=y)} {name}/RUB: {rate}'
+    return f'{datetime(day=d, month=m, year=y).strftime("%m/%d/%Y")} {name}/RUB: {rate}'
