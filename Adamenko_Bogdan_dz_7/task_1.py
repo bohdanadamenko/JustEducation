@@ -1,10 +1,10 @@
 import os
 
-
-folder = 'project'
-subfolder = 'app'
-file_name = 'script.py'
-
-path = [folder, subfolder, file_name]
-
-print('\n'.join(path))
+pattern = {'my_project': ['settings', 'mainapp', 'adminapp', 'authapp']}
+for root, folders in pattern.items():
+    if os.path.exists(root):
+        print(root, 'this folder exist')
+    else:
+        for folder in folders:
+            cur_dir = os.path.join(root, folder)
+            os.makedirs(cur_dir)
