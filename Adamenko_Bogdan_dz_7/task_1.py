@@ -8,3 +8,5 @@ for root, folders in pattern.items():
         for folder in folders:
             cur_dir = os.path.join(root, folder)
             os.makedirs(cur_dir)
+
+#that ok
