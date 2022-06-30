@@ -1,19 +1,13 @@
-from time import sleep
-from itertools import cycle
-
+import time
+import itertools
 
 class TrafficLight:
-
     def __init__(self):
-        self.__color = (('Red', 5), ('Yellow', 2), ('Green', 4))
+        self.__color = (('Red', 7), ('Yellow', 2), ('Green', 3))
 
     def running(self):
-        for color, sec in cycle(self.__color):
-            print(color, '(wait {} sec)'.format(sec))
-            sleep(sec)
+        for color, sec in itertools.cycle(self.__color):
+            print(f'Now its {color} Light for {sec}')
+            time.sleep(sec)
 
-
-traffic_light = TrafficLight()
-traffic_light.running()
-
-#hello world
+sf = TrafficLight().running()
